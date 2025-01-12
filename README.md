@@ -8,8 +8,8 @@ The purpose of this project is to create a foundation for high performing and re
 
 ## 1.Setting up RHEL Environment
 -sudo dnf update -y  
--(updates the system's software packages)  
--(sudo = superuser or root to gain admin privileges)
+(updates the system's software packages)  
+(sudo = superuser or root to gain admin privileges)
 
 Configure GRUB Bootloader 
 Customize GRUB for dual boot setup, kernal turning, or add recovery options
