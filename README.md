@@ -1,21 +1,27 @@
-## RHEL Evnvironment Automation and PostgreSQL Setup
-Netsmart demo
+## Project Overview  
 
-## Project Overview
+***RHEL Evnvironment Automation and PostgreSQL Setup***  
+
 This project demonstrates how to configure and automate a Red Hat Enterprise Linux(RHEL) evvironment to ensure reliability, scalability, and security. The setup includes configuring GRUB for system recovery, installing and optimizing PostgreSQL for database management, and automating routing administrative tasks like system updates, user management, and backups
 
 The purpose of this project is to create a foundation for high performing and resilient IT systems, particularly in environments requiring regulatory compliance and high availability, such as healthcare IT
 
 ## 1.Setting up RHEL Environment  
-***Updates the system's software packages***  
-- sudo dnf update -y  
-(sudo = superuser or root to gain admin privileges)  
+***Update the system's software packages***  
+```bash
+#sudo = superuser or root to gain admin privileges)
+
+sudo dnf update -y  
+```
 
 ## 2.Configure and Customize GRUB Bootloader  
 ***Customize GRUB for dual boot setup, kernel tuning, or recovery options***   
 
-View kernels installed on the system  
-- sudo rpm -q kernel  
+```bash
+View kernels installed on the system
+
+sudo rpm -q kernel
+```
 
 ***Edit the GRUB Configuration***
 
