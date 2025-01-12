@@ -43,6 +43,8 @@ sudo rpm -q kernel
 
 - GRUB_CMDLINE_LINUX="console=ttyS0,115200n8 debug"
 ```
+![GRUB menu with changes](assets/grub%20menu.png)
+
 
 ***Add a recovery kernel option or modify existing entries***  
 
