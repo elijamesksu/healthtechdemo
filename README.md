@@ -11,10 +11,10 @@ The purpose of this project is to create a foundation for high performing and re
 (updates the system's software packages)  
 (sudo = superuser or root to gain admin privileges)
 
-## 2.Configure GRUB Bootloader
+## 2.Configure GRUB Bootloader  
 Customize GRUB for dual boot setup, kernel tuning, or recovery options  
 View kernels installed on the system  
-- 
+
 
 
 Configure GRUB Bootloader 
