@@ -52,6 +52,8 @@ sudo rpm -q kernel
 - sudo grub2-editenv /boot/grub2/grubenv create  
 - sudo grub2-mkconfig -o /boot/grub2/grub.cfg
 ```
+![Grub2 mkconfig/editenv commands](assets/grub%20configs.png)
+
 
 ***Rebuild GRUB configuration***  
 
