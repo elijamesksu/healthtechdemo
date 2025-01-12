@@ -130,17 +130,19 @@ Creating separate users with specific privileges ensure secure db access. Using 
 
 stay in -u postgres psql  
 
-> `CREATE TABLE Information(`  
-> `id SERIAL PRIMARY KEY,`  
-> `name VARCHAR(100),`  
-> `position VARCHAR(100),`  
-> `salary VARCHAR(100)`  
-> `);`  
-> *Creating a table named `Information` with the following columns:*  
-> - `id`: A serial column that automatically increments and serves as the primary key.  
-> - `name`: A `VARCHAR` column that holds the name of the employee (up to 100 characters).  
-> - `position`: A `VARCHAR` column that holds the position of the employee (up to 100 characters).  
-> - `salary`: A `VARCHAR` column that holds the salary of the employee (up to 100 characters).  
+```sql
+#Creating a table named `Information` with the following columns  
+#`id`: A serial column that automatically increments and serves as the primary key.  
+#`name`: A `VARCHAR` column that holds the name of the employee (up to 100 characters).    
+#`position`: A `VARCHAR` column that holds the position of the employee (up to 100 characters).   
+#`salary`: A `VARCHAR` column that holds the salary of the employee (up to 100 characters).  
+`CREATE TABLE Information(`  
+  `id SERIAL PRIMARY KEY,`  
+  `name VARCHAR(100),`  
+  `position VARCHAR(100),`  
+  `salary VARCHAR(100)`  
+`);`  
+``` 
 
 ***Insert data into table***  
 
