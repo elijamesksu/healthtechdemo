@@ -7,9 +7,15 @@ This project demonstrates how to configure and automate a Red Hat Enterprise Lin
 The purpose of this project is to create a foundation for high performing and resilient IT systems, particularly in environments requiring regulatory compliance and high availability, such as healthcare IT
 
 ## 1.Setting up RHEL Environment
--sudo dnf update -y  
+- sudo dnf update -y  
 (updates the system's software packages)  
 (sudo = superuser or root to gain admin privileges)
+
+## 2.Configure GRUB Bootloader
+Customize GRUB for dual boot setup, kernel tuning, or recovery options  
+View kernels installed on the system  
+- 
+
 
 Configure GRUB Bootloader 
 Customize GRUB for dual boot setup, kernal turning, or add recovery options
