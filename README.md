@@ -76,6 +76,8 @@ sudo rpm -q kernel
 
 - sudo dnf install postgresql-server postgresql-contrib -y
 ```
+![PostgreSQL Install](assets/postgresql%20download%20.png)
+
   
 ***Initialize the PostgreSQL database***  
 
