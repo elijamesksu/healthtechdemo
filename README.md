@@ -144,8 +144,9 @@ stay in -u postgres psql
 `CREATE TABLE Information(`  
   `id SERIAL PRIMARY KEY,`  
   `name VARCHAR(100),`  
-  `position VARCHAR(100),`  
-  `salary VARCHAR(100)`  
+  `dob DATE,`  
+  `diagnosis VARCHAR(255),`
+  `treatment_plan TEXT 
 `);`  
 ``` 
 
@@ -156,8 +157,8 @@ stay in -u postgres sql
 This demonstrates inserting records into the database which is important for managing and storing any type of organizational data. For Netsmart it could be patient data etc.  
 
 ```sql
-INSERT INTO Information(name, position, salary) VALUES('Eli', 'James', '50,000');
-INSERT INTO Information(name, position, salary) VALUES('Elon', 'Tusk', '100,000');
+INSERT INTO Information(name, dob, diagnosis, treatment_plan) VALUES('Eli', '07/24/2000', 'Stress fracture', '6-week rehab');
+INSERT INTO Information(name, dob, diagnosis, treatment_plan) VALUES('Ryan', '07/22/1999, 'Meniscus Tear', '4 months - rehab');
 ```
 
 ***Optimize PostgreSQL***  
@@ -562,5 +563,5 @@ File Management - Enables batch updates and backups, ensuring smooth database op
 
 ![Screenshot 2025-01-11](assets/Screenshot%202025-01-11%20105932.png)
 Dracut attempt 
-
+prometheus
 
