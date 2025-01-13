@@ -332,6 +332,98 @@ Write the script
 > ./backup_script.sh
 ```
 
+## 5.Firewall and Encryption
+
+***Setting up basic firewall***
+```bash
+#Start firewalld
+
+> sudo systemctl start firewalld
+```
+**Allow PostgeSQL port 5432 through the firewall**
+```bash
+#By default PostgreSQL listens on port 5432
+
+> sudo firewall-cmd --permanent --add-port=5432/tcp
+> sudo firewall-cmd --reload
+```
+
+**Verify firewall rules**
+```bash
+Verify the rule was added successfully
+
+> sudo firewall-cmd --list-all
+```
+***Encrypting PostgreSQL Backups with GPG***
+```bash
+#Install GPG
+
+> sudo dnf install gnupg
+```
+
+**Generate a GPG key**
+```bash
+> gpg --gen-key
+```
+
+**Create key then list keys**
+```bash
+> gpg --list-keys
+```
+
+**Modify script for encryption**
+```bash
+#Assuming PostgreSQL data directory is being backed up
+
+> nano/home/postgres/script.sh
+```
+
+**Backup script**
+```bash
+#!/bin/bash
+# Automate system backup using rsync
+
+DATE=$(date +'%Y-%m-%d')
+BACKUP_DIR="/backup/pg_backup_$DATE"
+
+# Create a backup directory
+mkdir -p $BACKUP_DIR
+
+# Backup PostgreSQL databases
+pg_dumpall -U postgres > $BACKUP_DIR/pg_backup.sql
+
+# Encrypt the backup using GPG
+gpg --output $BACKUP_DIR/pg_backup.sql.gpg --encrypt --recipient 'elijames@piclist.ai' $BACKUP_DIR/pg_backup.sql
+
+# Clean up the unencrypted backup file
+rm $BACKUP_DIR/pg_backup.sql
+
+echo "Backup completed and encrypted successfully at $BACKUP_DIR/pg_backup.sql.gpg"
+```
+
+**Make script executable**
+```bash
+> chmod +x /home/postgres/script.sh
+```
+
+**Run the script**
+```bash
+> /home/postgres/script.sh
+```
+
+***Automating the backup process***
+```bash
+#Edit crontab
+
+> crontab -e
+```
+
+**Add a cron job to run the backup daily**
+```bash
+#Add a cron job to run the backup daily at a specific time
+
+> 0 2 * * * /home/postgres/script.sh
+```
 
 **Command Review**
 ```bash
