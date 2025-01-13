@@ -340,6 +340,7 @@ Write the script
 
 > sudo systemctl start firewalld
 ```
+
 **Allow PostgeSQL port 5432 through the firewall**
 ```bash
 #By default PostgreSQL listens on port 5432
@@ -347,6 +348,8 @@ Write the script
 > sudo firewall-cmd --permanent --add-port=5432/tcp
 > sudo firewall-cmd --reload
 ```
+![Updated Firewall Configuration](assets/updated%20firewall.png)
+
 
 **Verify firewall rules**
 ```bash
@@ -354,22 +357,29 @@ Verify the rule was added successfully
 
 > sudo firewall-cmd --list-all
 ```
+![Firewall Configuration](assets/fireall.png)
+
+
 ***Encrypting PostgreSQL Backups with GPG***
 ```bash
 #Install GPG
 
-> sudo dnf install gnupg
+> sudo yum install gnupg -y
 ```
 
 **Generate a GPG key**
 ```bash
 > gpg --gen-key
 ```
+![Generation Success](assets/generation%20success.png)
+
 
 **Create key then list keys**
 ```bash
 > gpg --list-keys
 ```
+![GPG Encryption](assets/gpg.png)
+
 
 **Modify script for encryption**
 ```bash
@@ -377,6 +387,9 @@ Verify the rule was added successfully
 
 > nano/home/postgres/script.sh
 ```
+![Newest Script](assets/newestscript.png)
+
+
 
 **Backup script**
 ```bash
@@ -410,6 +423,8 @@ echo "Backup completed and encrypted successfully at $BACKUP_DIR/pg_backup.sql.g
 ```bash
 > /home/postgres/script.sh
 ```
+![Successful Encryption](assets/successful%20encryption.png)
+
 
 ***Automating the backup process***
 ```bash
@@ -424,6 +439,8 @@ echo "Backup completed and encrypted successfully at $BACKUP_DIR/pg_backup.sql.g
 
 > 0 2 * * * /home/postgres/script.sh
 ```
+![Cron Time Update](assets/cron%20time%20update.png)
+
 
 **Command Review**
 ```bash
