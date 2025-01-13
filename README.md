@@ -9,7 +9,7 @@ The purpose of this project is to create a foundation for high performing and re
 ## 1.Setting up RHEL Environment  
 ***Update the system's software packages***  
 ```bash
-#sudo = superuser or root to gain admin privileges)
+#sudo = superuser or root to gain admin privileges
 
 > sudo dnf update -y  
 ```
