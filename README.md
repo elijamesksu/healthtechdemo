@@ -158,7 +158,7 @@ This demonstrates inserting records into the database which is important for man
 
 ```sql
 INSERT INTO Information(name, dob, diagnosis, treatment_plan) VALUES('Eli', '07/24/2000', 'Stress fracture', '6-week rehab');
-INSERT INTO Information(name, dob, diagnosis, treatment_plan) VALUES('Ryan', '07/22/1999, 'Meniscus Tear', '4 months - rehab');
+INSERT INTO Information(name, dob, diagnosis, treatment_plan) VALUES('Ryan', '07/22/1999', 'Meniscus Tear', '4 months - rehab');
 ```
 
 ***Optimize PostgreSQL***  
