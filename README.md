@@ -221,9 +221,6 @@ Write the script
 #!/bin/bash
 #Automate system updates
 
-#Update package list
-> sudo dnf upgrade -y
-
 #Upgrade installed packages
 > sudo dnf upgrade -y
 
