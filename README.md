@@ -4,7 +4,7 @@
 
 This project demonstrates how to configure and automate a Red Hat Enterprise Linux(RHEL) evvironment to ensure reliability, scalability, and security. The setup includes configuring GRUB for system recovery, installing and optimizing PostgreSQL for database management, and automating routing administrative tasks like system updates, user management, and backups
 
-The purpose of this project is to create a foundation for high performing and resilient IT systems, particularly in environments requiring regulatory compliance and high availability, such as healthcare IT
+The purpose of this project is to create a foundation for high performing and resilient IT systems, particularly in environments requiring regulatory compliance and high availability, such as a company like Netsmart
 
 ## 1.Setting up RHEL Environment  
 ***Update the system's software packages***  
